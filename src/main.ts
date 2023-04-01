@@ -4,7 +4,7 @@ import { App, Plugin, WorkspaceLeaf } from "obsidian";
 import { VIEW_TYPE_CALENDAR } from "./constants";
 import { settings } from "./ui/stores";
 import {
-  appHasPeriodicNotesPluginLoaded,
+//  appHasPeriodicNotesPluginLoaded,
   CalendarSettingsTab,
   ISettings,
 } from "./settings";
@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-export default class CalendarPlugin extends Plugin {
+export default class DNCCalendarPlugin extends Plugin {
   public options: ISettings;
   private view: CalendarView;
 
@@ -41,8 +41,8 @@ export default class CalendarPlugin extends Plugin {
     );
 
     this.addCommand({
-      id: "show-calendar-view",
-      name: "Open view",
+      id: "show-dnc-calendar-view",
+      name: "Open DNC view",
       checkCallback: (checking: boolean) => {
         if (checking) {
           return (
@@ -53,22 +53,22 @@ export default class CalendarPlugin extends Plugin {
       },
     });
 
-    this.addCommand({
-      id: "open-weekly-note",
-      name: "Open Weekly Note",
-      checkCallback: (checking) => {
-        if (checking) {
-          return !appHasPeriodicNotesPluginLoaded();
-        }
-        this.view.openOrCreateWeeklyNote(window.moment(), false);
-      },
-    });
-
-    this.addCommand({
-      id: "reveal-active-note",
-      name: "Reveal active note",
-      callback: () => this.view.revealActiveNote(),
-    });
+//     this.addCommand({
+//       id: "open-weekly-note",
+//       name: "Open Weekly Note",
+//       checkCallback: (checking) => {
+//         if (checking) {
+//           return !appHasPeriodicNotesPluginLoaded();
+//         }
+//         this.view.openOrCreateWeeklyNote(window.moment(), false);
+//       },
+//     });
+// 
+//     this.addCommand({
+//       id: "reveal-active-note",
+//       name: "Reveal active note",
+//       callback: () => this.view.revealActiveNote(),
+//     });
 
     await this.loadOptions();
 

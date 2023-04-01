@@ -1,10 +1,10 @@
 {
-  "id": "calendar",
-  "name": "Calendar",
-  "description": "Calendar view of your daily notes",
+  "id": "td-dnc-calendar",
+  "name": "Daily Note Config Calendar",
+  "description": "Calendar view of your daily note configurations",
   "version": "1.5.10",
-  "author": "Liam Cain",
-  "authorUrl": "https://github.com/liamcain/",
+  "author": "Liam Cain; JDP Robinson",
+  "authorUrl": "https://github.com/johnataravir/",
   "fundingUrl": "https://www.buymeacoffee.com/liamcain",
   "isDesktopOnly": false,
   "minAppVersion": "0.9.11"

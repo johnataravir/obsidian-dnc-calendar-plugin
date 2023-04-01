@@ -1,8 +1,8 @@
 {
-  "name": "calendar",
+  "name": "td-dnc-calendar",
   "version": "1.5.10",
-  "description": "Calendar view of your daily notes",
-  "author": "liamcain",
+  "description": "Calendar view of your daily note configurations",
+  "author": "jdprobinson",
   "main": "main.js",
   "license": "MIT",
   "scripts": {

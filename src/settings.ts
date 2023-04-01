@@ -4,7 +4,7 @@ import type { ILocaleOverride, IWeekStartOption } from "obsidian-calendar-ui";
 
 import { DEFAULT_WEEK_FORMAT, DEFAULT_WORDS_PER_DOT } from "src/constants";
 
-import type CalendarPlugin from "./main";
+import type DNCCalendarPlugin from "./main";
 
 export interface ISettings {
   wordsPerDot: number;
@@ -51,9 +51,9 @@ export function appHasPeriodicNotesPluginLoaded(): boolean {
 }
 
 export class CalendarSettingsTab extends PluginSettingTab {
-  private plugin: CalendarPlugin;
+  private plugin: DNCCalendarPlugin;
 
-  constructor(app: App, plugin: CalendarPlugin) {
+  constructor(app: App, plugin: DNCCalendarPlugin) {
     super(app, plugin);
     this.plugin = plugin;
   }
